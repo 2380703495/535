@@ -1,0 +1,137 @@
+body {
+    background-image: url(../image/hyh_6.png);
+    width: 100%;
+    height: 100%;
+    color: #333;
+    font: 12px/22px "宋体", "Arial Narrow";
+    margin: 0;
+    padding: 0;
+}
+.top {
+    display: flex;
+    background-image: url(../image/hyh_6.png);
+}
+.channelHead {  
+    line-height: 20px;
+    
+    border-top: 3px solid #213e82;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.cheadTopbar {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    min-width: 1000px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.cheadTopbarLink {
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.cheadTopbarLink span {
+    color: #000;
+}
+
+.channelHead a:link, .channelHead a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+.channelHead a:hover {
+    color: #c00;
+    text-decoration: underline;
+}
+
+#wrap {
+    
+    width: 1000px;
+    margin: 100px auto 0;
+}
+
+#slideWrap {
+    width: 100%;
+    background-image: url(../image/hyh_7.png);
+}
+
+#slideWrap ol {
+    list-style: none;
+    height: 39px;
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #d6d6d6;
+    line-height: 37px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#slideWrap ol li {
+    width: calc(20% - 0.8px);
+    text-align: center;
+    border-right: 1px solid #d6d6d6;
+    background-image: url(../image/hyh_8.jpg);
+}
+
+#slideWrap ol li:last-child {
+    border-right: none;
+}
+
+#slideWrap ol li.active {
+
+    border-bottom: 1px solid #fff;
+}
+
+#slideWrap ol li p,
+#slideWrap ol li a {
+    font-family: 'Microsoft YaHei';
+    font-size: 1.4em;
+    color: #646464;
+    text-decoration: none;
+}
+
+#slideWrap ol li p:hover,
+#slideWrap ol li a:hover {
+    color: #8d0000;
+    text-decoration: underline;
+}
+
+#linkImg {
+    display: block;
+    margin: 10px auto 0;
+    border: 1px solid #333;
+    border-bottom: none;
+}
+
+#linkImg img {
+    width: 338px;
+    height: 238px; 
+    display: block;   
+}
+
+a.caption {
+    height: 34px;
+    line-height: 34px;
+    color: white;
+    font-family: 'Microsoft YaHei';
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    border: 1px solid #333;
+    border-top: none;
+}
+
+a.caption:hover {
+    text-decoration: underline;
+}
+
+.fanhui{
+    background-color: white;
+}

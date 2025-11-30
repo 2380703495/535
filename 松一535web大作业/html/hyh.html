@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生活中的善举</title>
+     <link rel="stylesheet" href="../css/hyh_style.css">
+</head>
+<body>
+    
+    <div class="top">
+        <div class="channelHead">
+        <div class="cheadTopbar">
+            <div class="cheadTopbarLink">
+            <div><a href="wcz.html" style="text-decoration: none" class="fanhui">返回首页</a></div>
+                <span>>></span>
+                <a href="https://www.sohu.com/a/891120870_100210642" target="_blank">世界是一个圆，你所释放的善意，终有一天会流到你自己身上</a>
+                <a href="../image/hyh_9.mp4" target="_blank">心存善意</a>
+            </div>
+            <div id="wrap">
+                <div id="slideWrap">
+                    <ol>
+                        <li liId="0"><p>一</p></li>
+                        <li liId="1"><p>二</p></li>
+                        <li liId="2"><p>三</p></li>
+                        <li liId="3"><p>四</p></li>
+                        <li liId="4"><p>五</p></li>
+                    </ol>
+                    <a id="linkImg" href=""><img src="" alt=""></a>
+                    <a class="caption" href=""></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>
+        var slideImages = [
+                { imagePath: '../image/hyh_1.jpg', caption: '志愿者帮助环卫工作人员', go: '1.html' },
+                { imagePath: '../image/hyh_2.png', caption: '重庆山火中的摩托少年', go: '2.html' },
+                { imagePath: '../image/hyh_3.webp', caption: '河南洪水中的人们', go: '3.html' },
+                { imagePath: '../image/hyh_4.webp', caption: '志愿者帮助过往行人', go: '4.html' },
+                { imagePath: '../image/hyh_5.jpg', caption: '疫情中人们互帮互助', go: '5.html' },
+            ];
+
+            const wrap = document.getElementById('slideWrap');
+            const imgLink = document.getElementById('linkImg');
+            const img = imgLink.querySelector('img');
+            const caption = document.querySelector('.caption');
+            const lis = wrap.querySelectorAll('li');
+            let index = 0;
+            let timer;
+
+
+            function show(i) {
+                index = i;
+                const data = slideImages[index];
+                img.src = data.imagePath;
+                imgLink.href = data.go;
+                caption.href = data.go;
+                caption.textContent = data.caption;
+            }
+
+
+            function next() {
+                show((index + 1) % slideImages.length);
+            }
+
+
+            wrap.onmouseenter = () => clearInterval(timer);
+            wrap.onmouseleave = () => timer = setInterval(next, 3000);
+            lis.forEach(li => {
+                li.onmouseenter = () => show(parseInt(li.getAttribute('liid')));
+            });
+
+
+            show(0);
+            timer = setInterval(next, 3000);
+    </script>
+</body>
+</html>

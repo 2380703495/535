@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color:blue;
+}
+
+a:hover{
+    color: palegreen;
+}
+
+.universe{
+    display: flex;
+    justify-content: space-around;
+    background-image: url(../image/universe.png);
+    height: 100vh; 
+    width: 100vw;      
+}
+
+.max-top{
+    position: absolute;
+    background-color: black;
+    color: white;
+    width: 100vw;
+    text-align: center;
+}
+
+.star{
+    height: 150px;
+    width: 150px;
+}
+
+.star1{
+    display: flex;
+    position: relative;
+    top: 300px;
+    height: 150px;
+    width: 150px;
+}
+
+.star1-zi{
+    color: red;
+    position: absolute;
+    right: 30px;
+    top: 60px;
+}
+
+.star2{
+    display: flex;
+    position: relative;
+    top: 200px;
+    height: 150px;
+    width: 150px;
+}
+
+.star2-zi {
+    color: red;
+    position: absolute;
+    right: 30px;
+    top: 60px;
+}
+
+.star3{
+    display: flex;
+    position: relative;
+    top: 400px;
+    height: 150px;
+    width: 150px;
+}
+
+.star3-zi {
+    color: red;
+    position: absolute;
+    right: 30px;
+    top: 60px;
+}
+
+.star4{
+    display: flex;
+    position: relative;
+    top: 200px;
+    height: 150px;
+    width: 150px;
+}
+
+.star4-zi {
+    color: red;
+    position: absolute;
+    right: 30px;
+    top: 60px;
+}
+
+.star5{
+    display: flex;
+    position: relative;
+    top: 300px;
+    height: 150px;
+    width: 150px;
+}
+
+.star5-zi {
+    color: red;
+    position: absolute;
+    right: 30px;
+    top: 60px;
+}
+
+.kuaiqun{
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-template-rows: 300px 300px;
+    row-gap: 100px;
+    column-gap: 40px;
+    width: 100vw;
+    height:800px;
+    background: linear-gradient(to bottom, #00050d, #faebd7);
+}
+
+.kuai{
+    position: relative;
+    margin: 40px;
+    margin-left: 30px;
+    height: 300px;
+    width: 30vw;
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.touxiang{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 16px;
+    margin: 5px;
+}
+
+.web{
+    position: absolute;
+    height: 150px;
+    width: 300px;
+    left: 130px;
+    top: 5px;
+}
+
+.name{
+    position: absolute;
+    top: 120px;
+    left: 25px;
+    font-size: 20px;
+}
+
+.brief{
+    position: absolute;
+    top: 160px;
+    left: 5px;
+}
+
+#wcz{
+    background-color: rgb(217, 160, 160);
+}
+
+#wxz{
+    background-color: rgb(118, 194, 194);
+}
+
+#wqx{
+    background-color: rgb(120, 220, 187);
+}
+
+#zxh{
+    background-color: bisque;
+}
+
+#jfy{
+    background-color: rgb(168, 147, 215);
+}
+
+#hyh{
+    background-color: rgb(107, 147, 223);
+}
+
+.foot{
+    position: relative;
+    height: 150px;
+    width: 100vw;
+    background-color:antiquewhite;
+}
+
+.equwei{
+    position: absolute;
+    width: 100vw;
+    top: 5px;
+    font-family: "宋体";
+}
+
+.one{
+    position: absolute;
+    left:35vw
+}
+
+.two{
+    position: absolute;
+    top: 30px;
+    left: 31vw;
+}
+
+.three{
+    position: absolute;
+    top: 60px;
+    left: 35vw;
+}
+
+td{
+    padding-left: 10px;
+}
+
+.yulu{
+    position:absolute;
+    bottom: 20px;
+    left: 10px;
+    font-family: "宋体";
+    font-size: large;
+}

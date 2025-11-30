@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京剧 - 国粹艺术</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #8b0000;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            font-size: 2.5rem;
+        }
+        
+        .intro {
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        
+        .content-section {
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            background-color: white;
+        }
+        
+        h2 {
+            color: #8b0000;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        p {
+            margin-bottom: 10px;
+            text-indent: 2em;
+        }
+        
+        .highlight {
+            color: #0066cc;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .video-section {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .video-link {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 8px 15px;
+            background-color: #8b0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+        
+        .values-list {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .values-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .values-list li:before {
+            color: #8b0000;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div><a href="wcz.html" style="text-decoration: none">返回首页</a></div>
+        <h1>京剧 - 国粹艺术</h1>
+        <div class="intro">
+            <p>京剧是中国传统文化的重要组成部分，蕴含着丰富的正能量价值观。</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>京剧简介</h2>
+            <p>京剧，又称平剧、京戏等，是中国影响最大的戏曲剧种，分布地以北京为中心，遍及全国各地。</p>
+            <p>清代乾隆五十五年（1790年）起，原在南方演出的三庆、四喜、春台、和春四大徽班陆续进入北京，与来自湖北的汉调艺人合作，同时接受了昆曲、秦腔的部分剧目、曲调和表演方法，又吸收了一些地方民间曲调，通过不断的交流、融合，最终形成京剧。</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>京剧的艺术特点</h2>
+            <p>京剧表演的四种艺术手法：<span class="highlight" id="sing">唱</span>、<span class="highlight" id="speak">念</span>、<span class="highlight" id="act">做</span>、<span class="highlight" id="fight">打</span>，也是京剧表演四项基本功。</p>
+            <p>京剧舞台艺术在文学、表演、音乐、唱腔、锣鼓、化妆、脸谱等各个方面，通过无数艺人的长期舞台实践，构成了一套互相制约、相得益彰的格律化和规范化的程式。</p>
+        </div>
+
+        <div class="content-section">
+            <h2>京剧中的正能量价值观</h2>
+            <ul class="values-list">
+                <li><strong>忠孝节义</strong> - 京剧剧目大多弘扬忠诚、孝顺、节操和义气等传统美德</li>
+                <li><strong>惩恶扬善</strong> - 通过戏剧冲突展现正义必将战胜邪恶的价值观</li>
+                <li><strong>家国情怀</strong> - 许多剧目表达了对国家和民族的忠诚与热爱</li>
+                <li><strong>坚韧不拔</strong> - 京剧表演需要长期刻苦训练，体现了持之以恒的精神</li>
+                <li><strong>团结协作</strong> - 一台成功的京剧演出需要演员、乐队、舞美等各方密切配合</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>传承京剧艺术，弘扬正能量价值观</p>
+        </footer>
+    </div>
+    
+    <script>
+        // 点击"唱念做打"跳转到相关介绍页面
+        document.getElementById('sing').addEventListener('click', function () {
+            window.open('https://baike.baidu.com/item/%E5%94%B1%E5%BF%B5%E5%81%9A%E6%89%93', '_blank');
+        });
+
+        document.getElementById('speak').addEventListener('click', function () {
+            window.open('https://baike.baidu.com/item/%E5%BF%B5%E7%99%BD', '_blank');
+        });
+
+        document.getElementById('act').addEventListener('click', function () {
+            window.open('https://baike.baidu.com/item/%E5%81%9A%E5%B7%A5', '_blank');
+        });
+
+        document.getElementById('fight').addEventListener('click', function () {
+            window.open('https://baike.baidu.com/item/%E6%89%93%E6%96%97', '_blank');
+        });
+    </script>
+            
+        <div class="video-section">
+            <h2>京剧经典武戏片段</h2>
+            <a href="https://v.douyin.com/HRWPqf6VYzY/" class="video-link" target="_blank">
+                点击观看抖音京剧武戏视频
+            </a>
+        </div>
+        
+</body>
+</html>

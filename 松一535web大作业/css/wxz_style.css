@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", "Heiti SC", sans-serif;
+}
+
+body {
+    background-color: #f9fafb;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 导航栏样式 */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.item a:hover {
+    color: #ff6b6b;
+}
+
+.item a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff6b6b;
+    transition: width 0.3s ease;
+}
+
+.item a:hover::after {
+    width: 100%;
+}
+
+/* 主视觉区域 */
+main section:first-child {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #fef7fb 0%, #f0f8fb 100%);
+    margin-bottom: 4rem;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 左半部分：文字区域 */
+.left-col {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+main section:first-child h1 {
+    font-size: 3rem;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+}
+
+main section:first-child h1 span {
+    color: #ff6b6b;
+    position: relative;
+}
+
+main section:first-child h1 span::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #ffead0;
+    z-index: -1;
+    border-radius: 4px;
+}
+
+main section:first-child p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add {
+    display: inline-block;
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.add:hover {
+    background-color: #e55353;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+/* 右半部分：轮播图区域 */
+.right-col {
+    flex: 1 1 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* 轮播图样式优化 */
+#wrap {
+    width: 100%;
+    max-width: 400px;
+    min-width: 280px;
+}
+
+#slideWrap {
+    width: 100%;
+    float: none;
+}
+
+#slideWrap ol {
+    list-style: none;
+    height: 39px;
+    border-top: 2px solid #ff6b6b;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fff;
+    line-height: 37px;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+#slideWrap ol li {
+    flex: 1;
+    width: auto;
+    text-align: center;
+    border-right: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+#slideWrap ol li:last-child {
+    border-right: none;
+}
+
+#slideWrap ol li.active {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    position: relative;
+}
+
+#slideWrap ol li.active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6b6b;
+}
+
+#slideWrap ol li a {
+    font-family: 'Microsoft YaHei';
+    font-size: 0.9rem;
+    color: #646464;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+#slideWrap ol li a:hover {
+    color: #ff6b6b;
+    text-decoration: none;
+}
+
+#slideWrap ol li.active a {
+    color: #ff6b6b;
+    font-weight: 500;
+}
+
+#linkImg {
+    display: block;
+    margin: 10px auto 0;
+    border: 1px solid #eee;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+#linkImg:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#linkImg img {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+    display: block;
+    border: none;
+}
+
+a.caption {
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    font-family: 'Microsoft YaHei';
+    font-size: 15px;
+    text-decoration: none;
+    background-color: #333;
+    display: block;
+    text-align: center;
+    border: 1px solid #333;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    transition: background-color 0.3s ease;
+}
+
+a.caption:hover {
+    text-decoration: none;
+    background-color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+/* 名言轮播区域 */
+main section:nth-child(2) {
+    padding: 4rem 0;
+    margin-bottom: 4rem;
+}
+
+main section:nth-child(2)>div {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+main section:nth-child(2)>div>div:first-child {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+main section:nth-child(2) h2 {
+    font-size: 2rem;
+    color: #2d3748;
+    margin-bottom: 0.8rem;
+    position: relative;
+    display: inline-block;
+}
+
+main section:nth-child(2) h2::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #4299e1;
+    border-radius: 3px;
+}
+
+.text-primary {
+    color: #4299e1;
+}
+
+main section:nth-child(2) p {
+    color: #718096;
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 轮播容器样式 */
+main section:nth-child(2)>div>div:last-child {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 名言轮播内容 */
+.quote-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.quote-item {
+    flex: 0 0 100%;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+
+/* 轮播指示器 */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: #4299e1;
+    width: 30px;
+    border-radius: 6px;
+}
+
+/* 响应式调整 */
+@media (max-width: 992px) {
+    main section:first-child h1 {
+        font-size: 2.5rem;
+    }
+
+    #slideWrap ol li a {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    main section:first-child {
+        padding: 4rem 0;
+    }
+
+    main section:first-child h1 {
+        font-size: 2rem;
+    }
+
+    header .container {
+        gap: 2rem;
+    }
+
+    .item a {
+        font-size: 1rem;
+    }
+
+    main section:nth-child(2)>div>div:last-child {
+        padding: 2rem 1rem;
+    }
+
+    .quote-item p:first-of-type {
+        font-size: 1.1rem;
+    }
+
+    #slideWrap ol {
+        height: 35px;
+        line-height: 33px;
+    }
+}
+
+@media (max-width: 576px) {
+    header .container {
+        gap: 1rem;
+    }
+
+    main section:first-child h1 {
+        font-size: 1.8rem;
+    }
+
+    main section:first-child p {
+        font-size: 1rem;
+    }
+
+    .add {
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    main section:nth-child(2) h2 {
+        font-size: 1.6rem;
+    }
+
+    #slideWrap ol li a {
+        font-size: 0.7rem;
+        padding: 0 2px;
+    }
+
+    .quote-item p:first-of-type {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    .quote-item p:first-of-type::before,
+    .quote-item p:last-of-type::after {
+        font-size: 2rem;
+    }
+}
